@@ -1,0 +1,136 @@
+.Register {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.Register-Card {
+  overflow: hidden;
+  box-shadow: 2px 4px 8px #9999;
+  border-radius: 10px;
+  display: flex;
+  width: 50%;
+}
+.Register-left {
+  order: 1;
+  flex: 1;
+  display: flex;
+  padding: 0 40px;
+  flex-direction: column;
+  overflow-wrap: break-word;
+  background-image: url("https://images.pexels.com/photos/4881619/pexels-photo-4881619.jpeg?auto=compress&cs=tinysrgb&w=1600");
+  background-size: cover;
+  position: relative;
+  z-index: 8;
+  color: #fff;
+}
+.Register-left::before {
+  content: "";
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  left: 0;
+  z-index: -20;
+  background: linear-gradient(rgba(39, 11, 96, 0.5), rgba(39, 11, 96, 0.5));
+}
+.Register-left h1 {
+  font-size: 70px;
+}
+.Register-left p {
+  width: 95%;
+  font-size: 17px;
+  /* margin-top: -30px; */
+  letter-spacing: 2;
+}
+.Register-left span {
+  display: inline-block;
+  padding: 20px 0;
+}
+.Register-left button {
+  width: 13vw;
+  font-size: 20px;
+  font-weight: 100;
+  padding: 5px;
+  cursor: pointer;
+}
+.Register-right {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  padding: 0 40px;
+}
+.Register-right h1,
+input,
+button {
+  padding: 10px 5px;
+  margin: 20px 0;
+}
+.Register-right input {
+  width: 100%;
+  border: none;
+  outline: none;
+  border-bottom: 1px solid #000;
+}
+.Register-right h1 {
+  padding: 0;
+}
+.worinng {
+  display: none;
+  color: #f00;
+  margin-top: -18px;
+}
+.Register-right button {
+  width: 10vw;
+  border: none;
+  cursor: pointer;
+  padding: 10px;
+  font-size: 18px;
+  color: #fff;
+  background: linear-gradient(rgba(39, 11, 96, 0.5), rgba(39, 11, 96, 0.5));
+}
+@media (max-width: 1400px) {
+  .Register-Card {
+    width: 70%;
+  }
+}
+@media (max-width: 1050px) {
+  .Register-Card {
+    width: 85%;
+  }
+}
+@media (max-width: 767px) {
+  .Register {
+    min-height: 120vh;
+  }
+  .Register-Card {
+    display: flex;
+    flex-direction: column;
+    width: 90vw;
+  }
+  .Register-left {
+    order: -1;
+  }
+  .Register-left button {
+    width: fit-content;
+  }
+  .Register-right button {
+    width: fit-content;
+  }
+}
+@media (max-width: 440px) {
+  .Register {
+    min-height: 130vh;
+  }
+  .Register-left {
+    padding: 0 10px;
+  }
+  .Register-right {
+    padding: 0 10px;
+  }
+}
+@media (max-width: 380px) {
+  .Register {
+    min-height: 140vh;
+  }
+}
